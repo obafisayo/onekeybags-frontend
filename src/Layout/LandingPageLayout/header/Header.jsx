@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Container from "../../../components/container/Container";
 import Nav from "../nav/Nav";
@@ -10,8 +10,8 @@ import Hamburger from "../../../components/hamburger/Hamburger";
 
 export const CloseContext = React.createContext(null);
 
-function Header() {
-    const [close, setClose] = React.useState(false);
+function Header({handleHowToOrderPopup}) {
+    const [close, setClose] = useState(false);
     return (
         <StyledHeader className="bg-white dark:bg-gray-900 
         dark:text-white duration-200 relativez z-40">
@@ -23,7 +23,7 @@ function Header() {
                                 classname={"h-auto w-48 dark:fill-blue-600"}
                                 text="Onekey bags"
                             />
-                            <Nav />
+                            <Nav handleHowToOrderPopup={handleHowToOrderPopup} />
                         </div>
                         <div className="flex justify-between items-center gap-4">
                             <SearchBar />

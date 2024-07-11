@@ -1,4 +1,4 @@
-import { ABOUT, CONTACT, FAQS, HOME, HOWTOORDER } from "../../../routes/RouteConstants"
+import { ABOUT, CONTACT, FAQS, HOME } from "../../../routes/RouteConstants"
 
 export const FooterLinksConfig = [
     {
@@ -33,6 +33,5 @@ export const FooterLinksConfig1 = [
     },
     {
         title: "How To Order",
-        link: HOWTOORDER
     },
 ]

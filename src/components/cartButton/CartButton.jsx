@@ -1,7 +1,9 @@
-// import React from 'react'
+import React from 'react'
 import { FaCartShopping } from "react-icons/fa6"
 
+
 const CartButton = () => {
+
   return (
     <button className="relative p-3">
         <FaCartShopping 

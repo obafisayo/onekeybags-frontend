@@ -1,7 +1,6 @@
 import React from "react";
 import { FaCaretDown } from "react-icons/fa6";
 import { InternalNavlink } from "../../../components/Link/Link";
-import { HOWTOORDER } from "../../../routes/RouteConstants";
 import styled from "styled-components";
 import { CloseContext } from "../header/Header";
 import {
@@ -15,7 +14,7 @@ import {
     TRAVELSPORTSBAGS
 } from "../../../routes/RouteConstants";
 
-function Nav() {
+function Nav({handleHowToOrderPopup}) {
     const { setClose } = React.useContext(CloseContext)
     const navConfig = [
         {
@@ -154,8 +153,11 @@ function Nav() {
                         </div>
                     </li>
                 ))}
-                <li className="cursor-pointer" onClick={handleClick}>
-                    <InternalNavlink to={HOWTOORDER}
+                <li className="cursor-pointer" onClick={() => {
+                    handleHowToOrderPopup()
+                    handleClick()
+                }}>
+                    <InternalNavlink to={"#how-to-order"}
                         className="flex items-center
                         font-md lg:text-gray-500 hover:text-black
                         dark:hover:text-white py-2 px-4"
